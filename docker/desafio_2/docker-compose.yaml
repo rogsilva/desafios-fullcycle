@@ -37,11 +37,14 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: fullcycle
     volumes:
-      - ./mysql:/var/lib/mysql:rw
-    user: mysql:mysql
+      - mysql:/var/lib/mysql
     networks:
       - fullcycle
-    
+
+volumes:
+  mysql:
+    driver: local
+
 networks:
   fullcycle:
     driver: bridge
