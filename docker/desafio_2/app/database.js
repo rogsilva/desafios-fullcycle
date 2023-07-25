@@ -1,5 +1,5 @@
 import mysql from 'mysql';
-import { DB_CONFIG } from './config.mjs';
+import { DB_CONFIG } from './config.js';
 
 export function createTables(conn) {
     const sql = `

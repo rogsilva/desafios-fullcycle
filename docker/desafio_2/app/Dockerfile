@@ -1,8 +1,8 @@
 FROM node:18.16.0-alpine
 
-WORKDIR /usr/src/app
-
-COPY . .
+WORKDIR /usr/src
+COPY package.json package-lock.json ./
+RUN npm install
 
 ENV DOCKERIZE_VERSION v0.7.0
 
@@ -11,8 +11,9 @@ RUN apk update --no-cache \
     && wget -O - https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz | tar xzf - -C /usr/local/bin \
     && apk del wget
     
-RUN npm install
+WORKDIR /usr/src/app
+COPY . .
 
 EXPOSE 3000
 
-CMD ["node", "index.mjs"]
+CMD ["node", "index.js"]

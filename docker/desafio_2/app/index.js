@@ -1,5 +1,5 @@
 import express from 'express'
-import { connect, disconnect, createTables, insertPeople, selectPeople } from './database.mjs'
+import { connect, disconnect, createTables, insertPeople, selectPeople } from './database.js'
 
 const app = express()
 

@@ -17,10 +17,10 @@ services:
     build: ./app
     container_name: app_fullcycle
     volumes:
-      - ./app:/app
+      - ./app:/usr/src/app
     ports:
       - 3000:3000
-    entrypoint: dockerize --wait tcp://mysql_fullcycle:3306 --timeout 60s docker-entrypoint.sh node index.mjs
+    entrypoint: dockerize --wait tcp://mysql_fullcycle:3306 --timeout 60s docker-entrypoint.sh node index.js
     depends_on:
       - mysql_fullcycle
     environment:
