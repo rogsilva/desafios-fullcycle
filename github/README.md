@@ -1,4 +1,4 @@
-# Módulo sobre boas páticas com Git e GitHub
+# Módulo sobre boas práticas com Git e GitHub
 
 ## Desafio
 
