@@ -1,7 +1,6 @@
 const superTest = require('supertest');
 
 const app = require('./app');
-const { response } = require('express');
 const request = superTest(app);
 
 describe('Test the root path', () => {
