@@ -1,7 +1,8 @@
 const express = require('express');
 const utils = require('./utils');
 
-let app = express();
+const app = express();
+app.disable("x-powered-by");
 
 app.get('/', (req, res) => {
   res.send(utils.greeting('Full Cycle'));
