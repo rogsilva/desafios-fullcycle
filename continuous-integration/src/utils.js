@@ -1,5 +1,5 @@
-function greeating(name) {
+function greeting(name) {
   return `Hello ${name}!`;
 }
 
-module.exports = { greeating };
+module.exports = { greeting };

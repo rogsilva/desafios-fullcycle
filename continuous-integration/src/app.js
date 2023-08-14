@@ -2,9 +2,10 @@ const express = require('express');
 const utils = require('./utils');
 
 const app = express();
+app.disable("x-powered-by");
 
 app.get('/', (req, res) => {
-  res.send(utils.greeating('Full Cycle'));
+  res.send(utils.greeting('Full Cycle'));
 });
 
 if (process.env.NODE_ENV !== 'test') {
